@@ -1,6 +1,6 @@
 FROM alpine:latest
 RUN cd /tmp \
-  && apk add --update wget ca-certificates make g++ autoconf \
+  && apk add --update wget ca-certificates make g++ autoconf libstdc++ \
   && export SSDB_VERSION=master \
   && wget -O ssdb-src.tar.gz "https://github.com/ideawu/ssdb/archive/${SSDB_VERSION}.tar.gz" \
   && tar -zxf ssdb-src.tar.gz \
